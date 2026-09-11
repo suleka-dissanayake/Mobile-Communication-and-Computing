@@ -1,9 +1,11 @@
+import React from 'react';
+
 export default function StudentCom() {
     return (
         <div>
-            <h5> Student Information</h5>
-            <p>Name: Suleka</p>
-            <p>Course: Mobile Computing</p>
+            <h2> Student Information</h2>
+            <p>Name: {probs.name}</p>
+            <p>Course: {probs.course}</p>
         </div>
     );
 }

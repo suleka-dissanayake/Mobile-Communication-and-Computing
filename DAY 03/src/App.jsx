@@ -7,9 +7,11 @@ import StudentCom from './component/studentCom.jsx'
 function App() {
   return (
     <div>
-     <FunctionalComponent name="Suleka" />
-     <GreetClass name="Suleka" />
-     <StudentCom />
+      <FunctionalComponent name="Suleka" />
+      <GreetClass name="Suleka" />
+      <StudentCom name="Suleka" course="MCC" />
+      <StudentCom name="Arun" course="KBS" />
+      <StudentCom name="Nethsara" course="DIP" />
     </div>
   )
 }
