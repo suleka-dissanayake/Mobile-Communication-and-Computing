@@ -6,9 +6,11 @@ import StudentCom from './component/studentCom.jsx'
 
 function App() {
   return (
-      //<FunctionalComponent name="Suleka" />
-     // <GreetClass name="Suleka" />
+    <div>
+     <FunctionalComponent name="Suleka" />
+     <GreetClass name="Suleka" />
      <StudentCom />
+    </div>
   )
 }
 
