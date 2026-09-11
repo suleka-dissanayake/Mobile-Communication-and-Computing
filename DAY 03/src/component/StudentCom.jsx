@@ -1,7 +1,9 @@
 export default function StudentCom() {
     return (
-        <>
-            <h1 className='bg'>Hello Student</h1>
-        </>
+        <div>
+            <h5> Student Information</h5>
+            <p>Name: Suleka</p>
+            <p>Course: Mobile Computing</p>
+        </div>
     );
 }
