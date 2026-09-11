@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import FunctionalComponent from './component/functionalComponent.jsx'
+import FunctionalComponent from './component/FunctionalComponent.jsx'
 import GreetClass from './component/GreetClass.jsx'
-import StudentCom from './component/studentCom.jsx'
+import StudentCom from './component/StudentCom.jsx'
 
 function App() {
   return (

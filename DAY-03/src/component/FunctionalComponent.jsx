@@ -6,7 +6,7 @@ export default function Greeting(props) {
     return (
         <>
             <h1 className='bg'>Hello {props.name}</h1>
-            <button onclick={()=>setCount(count+1)}>{count}</button>
+            <button onClick={()=>setCount(count+1)}>{count}</button>
         </>
     );
 }

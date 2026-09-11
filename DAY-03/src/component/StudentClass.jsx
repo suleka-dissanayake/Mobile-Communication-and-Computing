@@ -1,4 +1,6 @@
-class StudentClass extends React.Component {
+import React from 'react';
+
+export default class StudentClass extends React.Component {
     render() {
         return (
             <div>
