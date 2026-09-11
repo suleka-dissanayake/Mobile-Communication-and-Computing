@@ -1,9 +1,5 @@
 import { useState } from 'react';
 
-export default function FunctionalComponent(props) {
-    return <h1>Hello, {props.name}! Welcome to my functional component!</h1>;
-}
-
 export default function Greeting(props) {
     const [count, setCount] = useState(0);
 
