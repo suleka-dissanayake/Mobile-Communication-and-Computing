@@ -1,10 +1,7 @@
 import React from 'react';
 
-// Functional Component
-// Receives an individual student's id, name, course, and status through props
 export default function StudentCard(props) {
     const { id, name, course, status } = props;
-
     const isActive = status === 'ACTIVE';
 
     return (
@@ -16,7 +13,7 @@ export default function StudentCard(props) {
                 </span>
             </div>
             <h3 className="student-name">{name}</h3>
-            <p className="student-course">🎓 {course}</p>
+            <p className="student-course">{course}</p>
         </div>
     );
 }

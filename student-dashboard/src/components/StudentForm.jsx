@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// Functional Component
-// Uses useState for form values, and props (onAddStudent) to communicate with App
 export default function StudentForm(props) {
     const [id, setId] = useState('');
     const [name, setName] = useState('');
