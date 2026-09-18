@@ -45,7 +45,6 @@
     padding-bottom: 5px;
 }
 
-/* Form */
 .form-section {
     margin-bottom: 35px;
 }
@@ -94,7 +93,6 @@
     box-shadow: 0 6px 14px rgba(17, 153, 142, 0.4);
 }
 
-/* Student list */
 .student-list-section {
     margin-top: 10px;
 }
@@ -112,7 +110,6 @@
     margin-top: 15px;
 }
 
-/* Student card */
 .student-card {
     background: white;
     border-radius: 14px;
@@ -170,7 +167,6 @@
     font-size: 0.95rem;
 }
 
-/* Footer */
 .app-footer {
     text-align: center;
     color: white;
