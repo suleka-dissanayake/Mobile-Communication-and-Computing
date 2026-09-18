@@ -7,7 +7,6 @@
     min-height: 100vh;
 }
 
-/* Header */
 .app-header {
     background: linear-gradient(90deg, #ff6a00, #f8000c);
     color: white;
@@ -29,7 +28,6 @@
     opacity: 0.9;
 }
 
-/* Main content */
 .app-main {
     flex: 1;
     background: rgba(255, 255, 255, 0.95);
@@ -39,7 +37,7 @@
 }
 
 .section-title {
-    color: #2575fc;
+    color: #0300a0;
     margin-bottom: 15px;
     font-size: 1.3rem;
     border-bottom: 3px solid #ee0979;
