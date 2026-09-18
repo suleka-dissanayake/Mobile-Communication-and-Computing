@@ -17,7 +17,7 @@ function App() {
     return (
         <div className="app-container">
             <header className="app-header">
-                <h1>🎓 STUDENT MANAGEMENT SYSTEM</h1>
+                <h1>STUDENT MANAGEMENT SYSTEM</h1>
                 <p>React Practical Assessment</p>
             </header>
 
@@ -27,7 +27,7 @@ function App() {
             </main>
 
             <footer className="app-footer">
-                <p>© 2026 Student Dashboard</p>
+                <p>2026 Student Dashboard</p>
             </footer>
         </div>
     );
