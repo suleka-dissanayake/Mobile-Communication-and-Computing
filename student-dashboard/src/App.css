@@ -74,7 +74,7 @@
 
 .student-form input:focus,
 .student-form select:focus {
-    border-color: #2575fc;
+    border-color: #0300a0;
 }
 
 .add-btn {
@@ -118,7 +118,7 @@
     border-radius: 14px;
     padding: 18px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-    border-top: 6px solid #2575fc;
+    border-top: 6px solid #2574fc00;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
