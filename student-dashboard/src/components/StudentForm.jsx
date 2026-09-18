@@ -23,7 +23,6 @@ export default function StudentForm(props) {
 
         props.onAddStudent(newStudent);
 
-        // Clear the form after a successful addition
         setId('');
         setName('');
         setCourse('');
