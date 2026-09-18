@@ -1,8 +1,6 @@
 import React from 'react';
 import StudentCard from './StudentCard.jsx';
 
-// Class Component
-// Receives the student list through props and displays multiple StudentCards
 export default class StudentList extends React.Component {
     render() {
         const { students } = this.props;
