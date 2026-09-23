@@ -9,6 +9,9 @@ export default function ObjectState() {
             <button onClick={() => setStudent({ ...student, age: student.age + 1 })}>
                 Increase Age
             </button>
+            <button onClick={() => setStudent({ ...student, name: "Bob" })}>
+                Change Name
+            </button>
         </div>
     );
 }
