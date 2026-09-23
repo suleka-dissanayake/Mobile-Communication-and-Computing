@@ -13,6 +13,9 @@ export default function ObjectState() {
             <button onClick={() => setStudent({ ...student, course: "AMC" })}>
                 Change Course
             </button>
+            <button onClick={() => setStudent({ ...student, name: "Bob" })}>
+                Change Name
+            </button>
         </div>
     );
 }

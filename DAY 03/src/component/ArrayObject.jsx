@@ -7,6 +7,17 @@ export default function ArrayObject() {
         { name: "Charlie", age: 35 },
     ]); 
 
+    const addStudent = () => {
+        const newStudent = { name: "David", age: 28 };
+        setStudents([...students, newStudent]);
+    }
+
+    const removeStudent = (index) => {
+        const updatedStudents = [...students];
+        updatedStudents.splice(index, 1);
+        setStudents(updatedStudents);
+    }
+
     return (
         <div>
             {students.map((student, index) => ( 
