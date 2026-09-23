@@ -12,10 +12,8 @@ export default function ArrayObject() {
         setStudents([...students, newStudent]);
     }
 
-    const removeStudent = (index) => {
-        const updatedStudents = [...students];
-        updatedStudents.splice(index, 1);
-        setStudents(updatedStudents);
+    const removeStudent = () => {
+        setStudents(students.filter(student => student.name !== "Bob"));
     }
 
     return (
