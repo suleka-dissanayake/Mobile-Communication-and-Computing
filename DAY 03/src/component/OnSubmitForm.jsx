@@ -7,6 +7,7 @@ export default function OnSubmitForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmittedName(name);
+        setName("");
         alert(`Form submitted with name: ${name}`);
     }
 
