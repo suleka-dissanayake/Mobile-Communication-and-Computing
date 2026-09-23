@@ -13,6 +13,7 @@ export default function ArrayObject() {
                 <div key={index}>
                     <h2>{student.name}</h2>
                     <h2>{student.age}</h2>
+                    <h3>{student.course}</h3>
                 </div>
             ))}
         </div>
