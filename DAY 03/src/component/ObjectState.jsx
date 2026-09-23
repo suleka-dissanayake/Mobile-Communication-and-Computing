@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 export default function ObjectState() {
-  const [person, setPerson] = useState({ name: "Alice", age: 30 });
+  const [student, setStudent] = useState({ name: "Alice", age: 30 });
     return (
         <div>
-            <h2>{person.name}</h2>
-            <h2>{person.age}</h2>
-            <button onClick={() => setPerson({ ...person, age: person.age + 1 })}>
+            <h2>{student.name}</h2>
+            <h2>{student.age}</h2>
+            <button onClick={() => setStudent({ ...student, age: student.age + 1 })}>
                 Increase Age
             </button>
         </div>
