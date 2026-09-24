@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 export default function StringState() {
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   return (
     <div>
       <input

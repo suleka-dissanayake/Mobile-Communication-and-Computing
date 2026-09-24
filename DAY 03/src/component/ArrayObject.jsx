@@ -2,23 +2,25 @@ import { useState } from "react";
 
 export default function ArrayObject() {
     const [students, setStudents] = useState([
-        { name: "Alice", age: 30 },
-        { name: "Bob", age: 25 },
-        { name: "Charlie", age: 35 },
-    ]); 
+        { name: "Alice", age: 30, course: "IT" },
+        { name: "Bob", age: 25, course: "SE" },
+        { name: "Charlie", age: 35, course: "DS" },
+    ]);
 
     const addStudent = () => {
-        const newStudent = { name: "David", age: 28 };
+        const newStudent = { name: "David", age: 28, course: "CS" };
         setStudents([...students, newStudent]);
-    }
+    };
 
     const removeStudent = () => {
-        setStudents(students.filter(student => student.name !== "Bob"));
-    }
+        setStudents(students.filter((student) => student.name !== "Bob"));
+    };
 
     return (
         <div>
-            {students.map((student, index) => ( 
+            <button onClick={addStudent}>Add Student</button>
+            <button onClick={removeStudent}>Remove Bob</button>
+            {students.map((student, index) => (
                 <div key={index}>
                     <h2>{student.name}</h2>
                     <h2>{student.age}</h2>

@@ -5,8 +5,8 @@ export default class StudentClass extends React.Component {
         return (
             <div>
                 <h1>Student Information</h1>
-                <p>Name: Suleka</p>
-                <p>Course: MCC</p>
+                <p>Name: {this.props.name}</p>
+                <p>Course: {this.props.course}</p>
             </div>
         );
     }

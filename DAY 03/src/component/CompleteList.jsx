@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function CompleteList() {
     const students = [
         {id: 1, name:"Alice", age:30},
