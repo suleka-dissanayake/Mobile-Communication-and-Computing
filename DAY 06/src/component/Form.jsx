@@ -20,32 +20,27 @@ function Form() {
       newErrors.name = "Name is required";
     }
 
-    if (!regNo) {
+    if (regNo.trim() === "") {
       newErrors.regNo = "Registration number is required";
     }
 
-    if (!email) {
+    if (!email.includes("@")) {
       newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = "Email is invalid";
     }
 
-    if (!age) {
-      newErrors.age = "Age is required";
-    } else if (isNaN(age)) {
-      newErrors.age = "Age must be a number";
+    if (age.trim() === "" || Number(age) < 18) {
+      newErrors.age = "Age must be at least 18";
     }
 
-    if (!course) {
+    if (course === "") {
       newErrors.course = "Course is required";
     }
 
-    if (!image) {
+    if (!image || image.trim() === "") {
       newErrors.image = "Image is required";
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return newErrors;
   }
 
 }
