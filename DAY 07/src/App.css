@@ -1,0 +1,173 @@
+/* Reset Vite's default template styles */
+:root {
+  color-scheme: light; /* stops the browser from turning inputs dark */
+}
+
+#root {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+
+body {
+  margin: 0;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: #f0f2f5;
+  color: #222;
+}
+
+h1,
+h2,
+h3 {
+  color: #222;
+  margin: 0 0 15px;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+/* ---------- Form ---------- */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  color: #222;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1f4fd8;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+  background: #1f4fd8;
+  color: white;
+}
+
+form button:hover {
+  background: #173bb0;
+}
+
+.error {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #d32f2f;
+}
+
+.success {
+  padding: 10px;
+  border-radius: 5px;
+  background: #d9f2e3;
+  color: #17703f;
+  font-weight: bold;
+}
+
+.preview {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ---------- Student cards ---------- */
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.student-card {
+  width: 180px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.student-card h3 {
+  margin: 10px 0 5px;
+}
+
+.course {
+  margin: 0 0 10px;
+  color: #1f4fd8;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.student-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.remove {
+  margin-top: 10px;
+  background: #fdecea;
+  color: #c0392b;
+}
