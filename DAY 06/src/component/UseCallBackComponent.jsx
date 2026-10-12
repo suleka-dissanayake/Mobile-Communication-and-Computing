@@ -36,7 +36,6 @@ export default UseCallBackComponent;
 //        ↓
 // Button may re-render
 
-
 // With useCallback
 
 // Parent re-renders
@@ -46,7 +45,6 @@ export default UseCallBackComponent;
 // Button receives same function
 //        ↓
 // React.memo prevents unnecessary render
-
 
 // useMemo vs useCallback
 
