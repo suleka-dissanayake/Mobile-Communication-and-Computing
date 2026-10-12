@@ -13,4 +13,4 @@ function Button({ handleClick }) {
 
 export default React.memo(Button);
 
-// React.memo() prevents the child from re-rendering when its props have not changed
+//React.memo() prevents the child from re-rendering when its props have not changed

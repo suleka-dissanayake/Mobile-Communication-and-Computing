@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import StudentForm from './components/StudentForm.jsx';
 import StudentList from './components/StudentList.jsx';
 import './App.css';

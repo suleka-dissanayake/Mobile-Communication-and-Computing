@@ -1,7 +1,7 @@
 import { useState } from "react";
 import StudentCard from "./StudentCard";
 
-function Form() {
+export default function Form() {
   // 1. State for each input
   const [name, setName] = useState("");
   const [regNo, setRegNo] = useState("");
@@ -178,5 +178,3 @@ function Form() {
     </div>
   );
 }
-
-export default Form;

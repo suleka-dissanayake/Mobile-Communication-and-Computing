@@ -5,18 +5,7 @@ function UseMemoComponent() {
     const [count, setCount] = useState(0);
     const [name, setName] = useState("");
 
-    //    When the page first loads, this runs expensiveResult
-    //    You will see in the console: Expensive calculation is running
-
-    //  click: Increase Count -> The component re-renders because count changes.
-    // But the expensive calculation does not run again because:
-    
-    // then type in the input
-    // Every time you type a character causes a re-render.
-    // But the expensive calculation is not repeated.
-
     const expensiveResult = useMemo(() => {
-
         console.log("Expensive calculation is running");
 
         let total = 0;
