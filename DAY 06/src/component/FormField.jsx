@@ -1,6 +1,7 @@
 // A small reusable component: label + input (children) + error message.
 // Teaching point: "children" lets one component wrap any kind of input.
-function FormField({ label, id, error, children }) {
+
+export default function FormField({ label, id, error, children }) {
   return (
     <div className={`field ${error ? "field-invalid" : ""}`}>
       <label htmlFor={id}>{label}</label>
@@ -15,5 +16,3 @@ function FormField({ label, id, error, children }) {
     </div>
   );
 }
-
-export default FormField;
