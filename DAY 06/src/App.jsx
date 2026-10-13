@@ -10,7 +10,6 @@ function App() {
                    {/* <UseMemoComponent/> */}
                     {/* useMemo is used to memoize a calculated value.
                     It can avoid repeating an expensive calculation when its dependencies have not changed. */}
-
                     {/* <UseCallBackComponent/> */}
                     <Form/>
             </>
