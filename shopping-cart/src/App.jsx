@@ -4,7 +4,7 @@ import ProductForm from './components/ProductForm.jsx';
 import ProductList from './components/ProductList.jsx';
 import './App.css';
 
-function App() {
+export default function App() {
     const [products, setProducts] = useState([
         { id: 'P001', name: 'Wireless Mouse', price: 2500, quantity: 2, status: 'IN CART' },
         { id: 'P002', name: 'Mechanical Keyboard', price: 12000, quantity: 1, status: 'IN CART' },
@@ -46,5 +46,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
