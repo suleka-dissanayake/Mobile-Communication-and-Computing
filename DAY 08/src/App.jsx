@@ -1,24 +1,34 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './components/Home';
-import About from './components/About';
-import Students from './components/Students';
-import StudentDetails from './components/StudentDetails';
-import Profile from './pages/Profile';
+import Navbar from './components/Navbar';
+import DashboardLayout from './components/DashboardLayout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Students from './pages/Students';
+import StudentDetails from './pages/StudentDetails';
 import DashboardHome from './pages/DashboardHome';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
+import NotFound from './pages/NotFound';
 
 export default function App() {
     return (
         <BrowserRouter>
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/students" element={<Students />} />
-                <Route path="/students/:id" element={<StudentDetails />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/dashboard" element={<DashboardHome />} />
-                <Route path="/settings" element={<Settings />} />
-                <Route path="/*" element={Not Found /} />
+                <Route path="/students/:studentId" element={<StudentDetails />} />
+
+                {/* Nested dashboard routes rendered inside DashboardLayout's <Outlet /> */}
+                <Route path="/dashboard" element={<DashboardLayout />}>
+                    <Route index element={<DashboardHome />} />
+                    <Route path="profile" element={<Profile />} />
+                    <Route path="settings" element={<Settings />} />
+                </Route>
+
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
     );
