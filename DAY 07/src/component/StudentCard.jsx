@@ -1,4 +1,6 @@
-function StudentCard({ student, onDelete }) {
+import React, {useState} from 'react';
+
+export default function StudentCard({ student, onDelete }) {
   return (
     <div className="student-card">
       <img src={student.image} alt={student.name} className="student-image" />
@@ -16,5 +18,3 @@ function StudentCard({ student, onDelete }) {
     </div>
   );
 }
-
-export default StudentCard;

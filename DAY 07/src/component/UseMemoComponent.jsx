@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 
 function UseMemoComponent() {
-
     const [count, setCount] = useState(0);
     const [name, setName] = useState("");
 
@@ -12,11 +11,10 @@ function UseMemoComponent() {
     // But the expensive calculation does not run again because:
     
     // then type in the input
-    // Every time you type a character causes a re-render.
+    // Every time y ou type a character causes a re-render.
     // But the expensive calculation is not repeated.
 
     const expensiveResult = useMemo(() => {
-
         console.log("Expensive calculation is running");
 
         let total = 0;
@@ -61,8 +59,6 @@ export default UseMemoComponent;
 
 // Why use useMemo? Every re-render would run the expensive calculation again.
 
-
-
 // useMemo remembers result
 //        ↓
 // State changes
@@ -72,8 +68,3 @@ export default UseMemoComponent;
 // useMemo gives the remembered result
 //        ↓
 // Expensive calculation does NOT run again
-
-
-// Important: useMemo does not stop the component from re-rendering. 
-// It prevents the memoized calculation from unnecessarily running again
-
