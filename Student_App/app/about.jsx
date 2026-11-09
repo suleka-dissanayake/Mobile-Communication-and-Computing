@@ -5,8 +5,8 @@ import { Colors } from '../constants/Colors'
 import { useTheme } from '../contexts/ThemeContext'
 
 const About = () => {
+  const { theme } = useTheme();
   
-    const { theme } = useTheme();
   return (
     <View style={[styles.container,{backgroundColor:theme.background}]}>
       <Text style={styles.title}>About Page </Text>

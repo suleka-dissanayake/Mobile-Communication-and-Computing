@@ -17,7 +17,7 @@ const Home = () => {
       <Link href="/about" style={styles.link}>About Page</Link>
       <Link href="/contact" style={styles.link}>Contact Page</Link>
       <Link href="/scrollview" style={styles.link}>ScrollView Demo</Link>
-<Link href="/flatlist" style={styles.link}>FlatList Demo</Link>
+      <Link href="/flatlist" style={styles.link}>FlatList Demo</Link>
     </View>
   )
 }
