@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   StyleSheet,
@@ -48,7 +47,6 @@ export default function App() {
         University of Vavuniya
       </Text>
 
-      {/* Student List using FlatList */}
       <FlatList
         data={students}
         keyExtractor={(item) => item.id.toString()}
@@ -61,7 +59,6 @@ export default function App() {
         )}
       />
 
-      {/* Text Input */}
       <TextInput
         style={styles.input}
         placeholder="Enter your name"
@@ -72,7 +69,6 @@ export default function App() {
         blurOnSubmit={false}
       />
 
-      {/* Add Button */}
       <TouchableOpacity
         style={styles.button}
         onPress={handleSubmit}
@@ -80,7 +76,6 @@ export default function App() {
         <Text style={styles.buttonText}>Add Name</Text>
       </TouchableOpacity>
 
-      {/* New Entries using FlatList */}
       <FlatList
         data={entries}
         keyExtractor={(item) => item.id}
