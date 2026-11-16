@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import {
   StyleSheet,
@@ -6,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  FlatList,
 } from 'react-native';
 
 export default function App() {
@@ -20,9 +22,19 @@ export default function App() {
 
   const handleSubmit = () => {
     const trimmed = text.trim();
-    if (trimmed === '') 
+
+    if (trimmed === '') {
       return;
-    setEntries([...entries, trimmed]);
+    }
+
+    setEntries([
+      ...entries,
+      {
+        id: Date.now().toString(),
+        name: trimmed,
+      },
+    ]);
+
     setText('');
   };
 
@@ -32,15 +44,24 @@ export default function App() {
       contentContainerStyle={styles.container}
       keyboardShouldPersistTaps="handled"
     >
-      <Text style={styles.text}>University of Vavuniya</Text>
+      <Text style={styles.text}>
+        University of Vavuniya
+      </Text>
 
-      {students.map((item) => (
-        <TouchableOpacity key={item.id} style={styles.row}>
-          <Text style={styles.name}>{item.name}</Text>
-          <Text style={styles.reg}>{item.reg}</Text>
-        </TouchableOpacity>
-      ))}
+      {/* Student List using FlatList */}
+      <FlatList
+        data={students}
+        keyExtractor={(item) => item.id.toString()}
+        scrollEnabled={false}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={styles.row}>
+            <Text style={styles.name}>{item.name}</Text>
+            <Text style={styles.reg}>{item.reg}</Text>
+          </TouchableOpacity>
+        )}
+      />
 
+      {/* Text Input */}
       <TextInput
         style={styles.input}
         placeholder="Enter your name"
@@ -50,14 +71,26 @@ export default function App() {
         returnKeyType="done"
         blurOnSubmit={false}
       />
-	  
-      <View style={styles.list}>
-        {entries.map((entry, index) => (
-          <Text key={index} style={styles.entry}>
-            {index + 1}. {entry}
+
+      {/* Add Button */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={handleSubmit}
+      >
+        <Text style={styles.buttonText}>Add Name</Text>
+      </TouchableOpacity>
+
+      {/* New Entries using FlatList */}
+      <FlatList
+        data={entries}
+        keyExtractor={(item) => item.id}
+        scrollEnabled={false}
+        renderItem={({ item, index }) => (
+          <Text style={styles.entry}>
+            {index + 1}. {item.name}
           </Text>
-        ))}
-      </View>
+        )}
+      />
     </ScrollView>
   );
 }
@@ -67,6 +100,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'blue',
   },
+
   container: {
     flexGrow: 1,
     justifyContent: 'center',
@@ -74,12 +108,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     padding: 20,
   },
+
   text: {
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
     marginBottom: 20,
   },
+
   row: {
     backgroundColor: 'white',
     padding: 15,
@@ -87,14 +123,17 @@ const styles = StyleSheet.create({
     width: 250,
     borderRadius: 8,
   },
+
   name: {
     fontSize: 18,
     fontWeight: 'bold',
   },
+
   reg: {
     fontSize: 14,
     color: 'gray',
   },
+
   input: {
     backgroundColor: 'white',
     width: 250,
@@ -103,12 +142,25 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginTop: 15,
   },
-  list: {
+
+  button: {
+    backgroundColor: 'orange',
     width: 250,
-    marginTop: 15,
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 10,
+    alignItems: 'center',
   },
+
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
   entry: {
     backgroundColor: 'white',
+    width: 250,
     padding: 10,
     marginVertical: 3,
     borderRadius: 8,
