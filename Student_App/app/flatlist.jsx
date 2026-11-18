@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'expo-router'
+
+const {text, setText} = useState('');
 
 // 1. The data: an array of objects, each with a unique id
 const students = [
