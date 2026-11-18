@@ -8,20 +8,28 @@ const FlatListDemo = () => {
   const [text, setText] = useState('')
 
   const students = [
-    { id: '1', name: 'Kamal' },
-    { id: '2', name: 'Nimal' },
-    { id: '3', name: 'Sunil' },
-    { id: '4', name: 'Amal' },
-    { id: '5', name: 'Saman' },
-    { id: '6', name: 'Nuwan' },
-    { id: '7', name: 'Kasun' },
-    { id: '8', name: 'Ruwan' },
-    { id: '9', name: 'Dinesh' },
-    { id: '10', name: 'Chamara' },
+    { id: '1', name: 'Kamal', city: 'Kandy' },
+    { id: '2', name: 'Nimal', city: 'Colombo'},
+    { id: '3', name: 'Sunil', city: 'Gampaha' },
+    { id: '4', name: 'Amal', city: 'Vavuniya' },
+    { id: '5', name: 'Saman', city: 'Jaffna' },
+    { id: '6', name: 'Nuwan', city: 'Colombo' },
+    { id: '7', name: 'Kasun', city: 'Kaluthara' },
+    { id: '8', name: 'Ruwan', city: 'Mannar' },
+    { id: '9', name: 'Dinesh', city: 'Anuradhapura' },
+    { id: '10', name: 'Chamara', city: 'Matale' },
   ]
 
   const filteredStudents = students.filter((item) =>
     item.name.toLowerCase().includes(text.toLowerCase())
+  )
+
+  const filterByCity = students.filter((item) => 
+    item.city.toLowerCase().includes(text.toLowerCase())
+  )
+
+  const filterById = students.filter((item) => 
+    item.id.toLowerCase().includes(text.toLowerCase())
   )
 
   return (
