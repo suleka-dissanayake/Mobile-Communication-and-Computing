@@ -2,11 +2,13 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import Logo from '../assets/img/image.jpg'
 import {Link} from 'expo-router'
+import TextInput from 'react-native/Libraries/Components/TextInput/TextInput'
 
 const Home = () => {
   return (
     <View style={styles.container}>
       <Image source={Logo} style={styles.logo}/>
+      
       <Text style={[styles.title,{color:"green"}]}>Reading Home Page</Text>
       <Text style={{marginVertical:20,color:"purple"}}>Initial page</Text>
 
