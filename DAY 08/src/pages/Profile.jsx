@@ -1,8 +1,11 @@
-export default function Profile() {
-    return (
+import {Link} from "react-router-dom";
+
+export default function NotFound() {
+    return(
         <div>
-            <h1>Profile</h1>
-            <p>View and edit your profile details here.</p>
+            <h2>404 Not Found</h2>
+            <p>Sorry. The requested URL is not found.</p>
+            <Link to="/">Back to Home</Link>
         </div>
     );
 }
