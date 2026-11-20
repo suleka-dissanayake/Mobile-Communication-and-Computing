@@ -12,4 +12,32 @@ function HomeScreen({navigation}) {
         {id: 3, name: 'Bob', age: 21},
         {id: 4, name: 'Alice', age: 23},
     ];
+
+    const [search, setSearch] = useState('')
+
+    const filteredStudents = students.filter((student) => {
+        return student.name.toLowerCase().includes(search.toLowerCase())
+    });
+
+
+    return(
+        <View style={styles.container}>
+            <TextInput
+                style={styles.input}
+                placeholder="Search"
+                value={search}
+                onChangeText={setSearch}
+            />
+            <FlatList
+                data={filteredStudents},
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({item}) => (
+                    <TouchableOpacity onPress={() => navigation.navigate('Details', {student: item})}>
+                        <Text style={styles.item}>{item.name}</Text>
+                    </TouchableOpacity>
+                )
+            />}
+            />
+        </View>
+    )
 }
