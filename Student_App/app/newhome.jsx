@@ -7,10 +7,10 @@ const Stack = createNativeStackNavigator()
 
 function HomeScreen({navigation}) {
     const students = [
-        {id: 1, name: 'John', age: 20, city: 'New York'},
-        {id: 2, name: 'Jane', age: 22, city: 'London'},
-        {id: 3, name: 'Bob', age: 21, city: 'Paris'},
-        {id: 4, name: 'Alice', age: 23, city: 'Berlin'},
+        {id: 1, name: 'John', regNo: 'IT001', age: 20, city: 'New York'},
+        {id: 2, name: 'Jane', age: 22, regNo: 'IT002', city: 'London'},
+        {id: 3, name: 'Bob', age: 21, regNo: 'IT003', city: 'Paris'},
+        {id: 4, name: 'Alice', age: 23, regNo: 'IT004', city: 'Berlin'},
     ];
 
     const [search, setSearch] = useState('')
