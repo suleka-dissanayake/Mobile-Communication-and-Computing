@@ -29,7 +29,7 @@ function HomeScreen({navigation}) {
                 onChangeText={setSearch}
             />
             <FlatList
-                data={filteredStudents},
+                data={filteredStudents}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({item}) => (
                     <TouchableOpacity onPress={() => navigation.navigate('Details', {student: item})}>
