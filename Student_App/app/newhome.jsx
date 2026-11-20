@@ -7,16 +7,17 @@ const Stack = createNativeStackNavigator()
 
 function HomeScreen({navigation}) {
     const students = [
-        {id: 1, name: 'John', age: 20},
-        {id: 2, name: 'Jane', age: 22},
-        {id: 3, name: 'Bob', age: 21},
-        {id: 4, name: 'Alice', age: 23},
+        {id: 1, name: 'John', age: 20, city: 'New York'},
+        {id: 2, name: 'Jane', age: 22, city: 'London'},
+        {id: 3, name: 'Bob', age: 21, city: 'Paris'},
+        {id: 4, name: 'Alice', age: 23, city: 'Berlin'},
     ];
 
     const [search, setSearch] = useState('')
 
     const filteredStudents = students.filter((student) => {
-        return student.name.toLowerCase().includes(search.toLowerCase())
+        student.name.toLowerCase().includes(search.toLowerCase())
+        student.city.toLowerCase().includes(search.toLowerCase())
     });
 
 
@@ -40,4 +41,15 @@ function HomeScreen({navigation}) {
             />
         </View>
     )
+}
+
+export default function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Details" component={DetailsScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
