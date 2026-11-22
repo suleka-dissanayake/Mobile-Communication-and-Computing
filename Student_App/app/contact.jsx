@@ -1,13 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
+import { useTheme } from '../contexts/ThemeContext'
 
 const Contact = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Contact Page </Text>
+  const { theme } = useTheme()
 
-      <Link href="/" style={styles.link}>Back Home</Link>
+  return (
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
+      <Text style={[styles.title, { color: theme.title }]}>Contact Page</Text>
+      <Link href="/" style={[styles.link, { color: theme.link, borderBottomColor: theme.link }]}>Back Home</Link>
     </View>
   )
 }
@@ -15,19 +17,7 @@ const Contact = () => {
 export default Contact
 
 const styles = StyleSheet.create({
-     container:{
-        flex:1, // default column direction
-        alignItems:'center',
-        justifyContent: 'center'
-    },
-    title:{
-        fontWeight:'bold',
-        fontSize:18,
-    },
-    link:{
-        marginVertical:10,
-        borderBottomWidth:1,
-        borderBottomColor:'blue',
-         color:'blue'
-    }
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  title: { fontWeight: 'bold', fontSize: 18 },
+  link: { marginVertical: 10, borderBottomWidth: 1 },
 })
