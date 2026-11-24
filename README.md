@@ -40,16 +40,4 @@ It focuses on **mobile application development**, progressing from day-by-day la
 
 ---
 
-# 📂 Repository Contents
-
-| Folder | Description |
-| ------ | ----------- |
-| `DAY 01` – `DAY 08` | Day-by-day laboratory exercises and practical tasks |
-| `StuDetailsApp` | Student details application |
-| `Student_App` | Student management application |
-| `bus-ticket-booking` | Bus ticket booking application |
-| `shopping-cart` | Shopping cart application |
-
----
-
 > 📌 *This repository is maintained for academic and learning purposes.*
